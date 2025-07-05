@@ -1,0 +1,175 @@
+.home-container {
+  height: 100vh;
+  width: 100vw;
+  background: url('../assets/home1.jpg') no-repeat center center;
+  background-size: cover;
+  animation: bgPan 20s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: zoomIn 0.6s ease-out, float 4s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.home-box:hover {
+  transform: translateY(-5px) scale(1.01);
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  animation: fadeDown 1s ease forwards;
+  opacity: 0;
+}
+
+.home-subtext {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.home-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+.home-btn {
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease, box-shadow 0.4s ease;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+  transition: left 0.5s;
+}
+
+.home-btn:hover::before {
+  left: 100%;
+}
+
+.home-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.user-btn {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background-size: 200% auto;
+  transition: background-position 0.5s;
+}
+
+.user-btn:hover {
+  background-position: right center;
+}
+
+.admin-btn {
+  background: linear-gradient(to right, #2980b9, #6dd5fa);
+  background-size: 200% auto;
+  transition: background-position 0.5s;
+}
+
+.admin-btn:hover {
+  background-position: right center;
+}
+
+/* Animations */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ✅ Animated Background Zoom/Pan Effect */
+@keyframes bgPan {
+  0% {
+    background-size: 105%;
+    background-position: center;
+  }
+  50% {
+    background-size: 110%;
+    background-position: top center;
+  }
+  100% {
+    background-size: 105%;
+    background-position: center;
+  }
+}

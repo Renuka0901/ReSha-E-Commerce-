@@ -1,0 +1,47 @@
+/* AdminSignup.css */
+
+.admin-bg {
+  background-image: url('../assets/ad2.avif');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-signup-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  width: 350px;
+}
+
+.admin-signup-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.admin-signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2a2a72;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.admin-signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-preview {
+  text-align: center;
+}

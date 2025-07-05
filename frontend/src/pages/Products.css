@@ -1,0 +1,156 @@
+/* Products.css - Colorful Admin Panel */
+
+.admin-page {
+  background: linear-gradient(135deg, #fff5f7, #f0f9ff);
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #4a148c;
+}
+
+.product-search {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 12px 20px;
+  font-size: 18px;
+  width: 60%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.product-search:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 10px #b3e5fc;
+}
+
+.add-product-form {
+  background: linear-gradient(135deg, #e1bee7, #f8bbd0);
+  padding: 30px;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.add-product-form input,
+.add-product-form select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.add-product-form input:focus,
+.add-product-form select:focus {
+  border-color: #7e57c2;
+}
+
+.add-product-form button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  background: linear-gradient(to right, #ff4081, #f50057);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-product-form .cancel-edit {
+  background: #b0bec5;
+  margin-left: 10px;
+}
+
+.add-product-form button:hover {
+  opacity: 0.9;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.product-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.product-info {
+  color: #333;
+}
+
+.product-info h3 {
+  color: #6a1b9a;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background: #64b5f6;
+  color: white;
+}
+
+.delete-btn {
+  background: #e57373;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #42a5f5;
+}
+
+.delete-btn:hover {
+  background: #ef5350;
+}
+
+.no-products {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-top: 20px;
+}

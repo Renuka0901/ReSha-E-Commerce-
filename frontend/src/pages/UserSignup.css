@@ -1,0 +1,102 @@
+/* Animated and Transparent User Signup CSS */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-bg {
+  background-image: url('../assets/log2.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-signup-container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 380px;
+  animation: fadeIn 1.2s ease-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.user-signup-container:hover {
+  transform: translateY(-5px);
+}
+
+.user-signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #333;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.user-signup-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.user-signup-form input:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.3);
+}
+
+.user-signup-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #0077ff, #00c6ff);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.user-signup-form button:hover {
+  background: linear-gradient(to right, #005ecb, #00a9e2);
+  transform: scale(1.02);
+}
+
+.image-preview {
+  text-align: center;
+  margin-bottom: 15px;
+  animation: fadeIn 2s ease-in;
+}
+
+.image-preview img {
+  border-radius: 50%;
+  border: 3px solid #0077ff;
+  transition: transform 0.3s ease;
+}
+
+.image-preview img:hover {
+  transform: scale(1.05);
+}
